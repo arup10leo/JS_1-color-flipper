@@ -32,7 +32,7 @@ btn.addEventListener("click", function() {
     for (let i = 0; i < 2; i++) {
         rgb3 += rgb7[randomNo()]
     }
-    rgbColor = `rgb(${rgb1}${rgb4},${rgb2}${rgb5},${rgb3}${rgb6})`
+    rgbColor = `rgb(${rgb4}${rgb1},${rgb5}${rgb2},${rgb6}${rgb3})`
     color.textContent = rgbColor
     document.body.style.background = rgbColor
 })
@@ -43,7 +43,7 @@ function randomNo() {
 }
 
 function randomNo1() {
-    return Math.floor(Math.random() * 2)
+    return Math.floor(Math.random() * 3)
 }
 btn.addEventListener("click", function() {
 
