@@ -1,4 +1,4 @@
-const rgb5 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+const rgb5 = [0, 1, 2, 3, 4, 5]
 
 // rgb(000,000,000)
 const btn = document.getElementById("btn")
