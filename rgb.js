@@ -1,4 +1,4 @@
-const rgb5 = [0, 1, 2, 3, 4, 5]
+const rgb7 = [0, 1, 2, 3, 4, 5]
 
 // rgb(000,000,000)
 const btn = document.getElementById("btn")
@@ -7,26 +7,43 @@ const color = document.querySelector(".color")
 btn.addEventListener("click", function() {
     let rgbColor = `rgb`
     let rgb1 = ""
-    for (let i = 0; i < 3; i++) {
-        rgb1 += rgb5[randomNo()]
+    let rgb4 = ""
+    for (let a = 0; a < 1; a++) {
+        rgb4 += rgb7[randomNo1()]
+    }
+    for (let i = 0; i < 2; i++) {
+        rgb1 += rgb7[randomNo()]
     }
 
+
     let rgb2 = ""
-    for (let i = 0; i < 3; i++) {
-        rgb2 += rgb5[randomNo()]
+    let rgb5 = ""
+    for (let a = 0; a < 1; a++) {
+        rgb5 += rgb7[randomNo1()]
+    }
+    for (let i = 0; i < 2; i++) {
+        rgb2 += rgb7[randomNo()]
     }
     let rgb3 = ""
-    for (let i = 0; i < 3; i++) {
-        rgb3 += rgb5[randomNo()]
+    let rgb6 = ""
+    for (let a = 0; a < 1; a++) {
+        rgb6 += rgb7[randomNo1()]
     }
-    rgbColor = `rgb(${rgb1},${rgb2},${rgb3})`
+    for (let i = 0; i < 2; i++) {
+        rgb3 += rgb7[randomNo()]
+    }
+    rgbColor = `rgb(${rgb1}${rgb4},${rgb2}${rgb5},${rgb3}${rgb6})`
     color.textContent = rgbColor
     document.body.style.background = rgbColor
 })
 
 
 function randomNo() {
-    return Math.floor(Math.random() * rgb5.length)
+    return Math.floor(Math.random() * rgb7.length)
+}
+
+function randomNo1() {
+    return Math.floor(Math.random() * 2)
 }
 btn.addEventListener("click", function() {
 
